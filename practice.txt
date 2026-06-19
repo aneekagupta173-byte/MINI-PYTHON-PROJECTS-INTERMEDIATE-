@@ -1,0 +1,6 @@
+acccountnumber,name,balance
+1001,rahul,3000
+1002,monica,1500
+1003,nisha,3100.0
+1234,Anna,9000
+5454,fsfg,1111

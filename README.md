@@ -1,6 +1,18 @@
-# BASIC-BANKING-SYSTEM
-As my first project in python, i have created a banking system that helps in checking balance , credit, debit and open new account and stores all the new data in a .txt file. 
+# Python Learning Projects 🐍
 
-the bank.py file is a simple file that works directly on the python terminal. 
+Welcome to my Python learning repository!
 
-the gui=banking_app.py is a file that works as a graphic user interface. :) 
+This repository contains a collection of small projects and practice programs I built while learning Python. Each project helped me understand different programming concepts such as variables, loops, functions, object-oriented programming, file handling, and GUI development.
+
+These projects may be simple, but each one represents a step in my journey as a programmer. I'll continue updating this repository as I learn new concepts and build more advanced applications.
+
+## Skills Practiced
+- Python Fundamentals
+- Problem Solving
+- Functions & Modules
+- File Handling
+- Object-Oriented Programming
+- Basic GUI Development (Tkinter)
+- Debugging & Logical Thinking
+
+Thank you for visiting my repository. Feel free to explore the projects and follow my coding journey!

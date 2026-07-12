@@ -60,6 +60,7 @@ class ExpenseTrackerApp:
         button_row.grid(row=5, column=0, columnspan=3, sticky="w", pady=10)
         ttk.Button(button_row, text="Save Entry", command=self.save_entry).pack(side="left", padx=(0, 8))
         ttk.Button(button_row, text="Clear Form", command=self.clear_form).pack(side="left")
+        ttk.Button(button_row, text="Delete All Entries", command=self.delete_entries).pack(side="left", padx=(8, 0))
 
         ttk.Label(main, text="Diary Entries").grid(row=6, column=0, columnspan=3, sticky="w", pady=(10, 5))
 
@@ -102,6 +103,18 @@ class ExpenseTrackerApp:
         self.entries.append({"date": date_value, "description": desc, "amount": amount, "category": category})
         self.display_entries()
         self.clear_form()
+    def delete_entries(self):
+        if not self.entries:
+            messagebox.showinfo("No Entries", "There are no entries to delete.")
+            return
+
+        confirm = messagebox.askyesno("Confirm Deletion", "Are you sure you want to delete all entries?")
+        if confirm:
+            self.entries.clear()
+            self.display_entries()
+            if self.canvas is not None:
+                self.ax.clear()
+                self.canvas.draw_idle()
 
     def open_graph_window(self):
         if self.graph_window is not None and tk.Toplevel.winfo_exists(self.graph_window):
@@ -174,4 +187,12 @@ if __name__ == "__main__":
     root = tk.Tk()
     ExpenseTrackerApp(root)
     root.mainloop()
+        self.ax.set_xlabel("Date")
+        self.ax.set_ylabel("Total Spent ($)")
+        self.ax.grid(True, linestyle="--", alpha=0.5)
+        self.figure.autofmt_xdate(rotation=30)
+        if self.canvas is not None:
+            self.canvas.draw_idle()
+
+
 
